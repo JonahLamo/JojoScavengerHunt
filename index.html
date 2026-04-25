@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang = 'en'>
+    <head>
+        <link rel="stylesheet" href="prjStyles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+    </head>
+    
+    <body class='page'>
+    <header class="top">
+      <h1>Jolene's 26th Birthday Scavenger Hunt!</h1>
+    </header>
+
+    <main class="project-page">
+
+      <!-- MAP COLUMN -->
+      <section class="project-map panel">
+        <div id="map" class="map-frame"></div>
+      </section>
+
+      <!-- INFO / HINTS COLUMN -->
+      <section class="project-info panel" id="ifo">
+        <button id="resetViewBtn" type="button">Reset View</button>
+        <h1>Project Locations</h1>
+        <p id="prjAbt"></p>
+
+        <!-- Team selector -->
+        <div class="team-selector">
+          <label for="teamSelect">Select Your Team:</label>
+          <select id="teamSelect">
+            <option value="">-- Choose a team --</option>
+            <option value="1">Team 1</option>
+            <option value="2">Team 2</option>
+            <option value="3">Team 3</option>
+            <option value="4">Team 4</option>
+            <option value="5">Team 5</option>
+            <option value="6">Team 6</option>
+            <option value="7">Team 7</option>
+            <option value="8">Team 8</option>
+            <option value="9">Team 9</option>
+            <option value="10">Team 10</option>
+          </select>
+        </div>
+
+        <h2>Active Hints</h2>
+        <ul id="legend"></ul>
+
+        <!-- Completed hints -->
+        <div class="completed-section">
+          <h2>Completed Hints</h2>
+          <p class="no-completed" id="noCompleted">No hints completed yet.</p>
+          <table id="completedTable" style="display:none;">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Hint</th>
+              </tr>
+            </thead>
+            <tbody id="completedBody"></tbody>
+          </table>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
+    <script src="prjScripts.js"></script>
+</body>
+</html>
